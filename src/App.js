@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./icons/twitterlogo.svg";
+import "normalize.css";
 import "./App.css";
 import styled from "styled-components";
 import homeicon from "./icons/Icon_Home.svg";
@@ -25,6 +26,11 @@ const NavIcon = styled.img`
   max-height: 18px;
 `;
 
+const AvatarSmall = styled.img`
+  max-height: 32px;
+  max-width: 32px;
+`;
+
 function NavBtn(props) {
   return (
     <a href={props.link}>
@@ -40,17 +46,6 @@ const CoverImg = styled.img`
 
 const TwitterLogo = styled.img``;
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: palevioletred;
-`;
-
-// Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-
 const SearchInput = styled.input`
   border-color: #e6ecf0;
   background: #f5f8fa;
@@ -63,8 +58,42 @@ const SearchInput = styled.input`
   background-position: center right;
   background-size: 15px 15px;
   text-align: left;
-  font-family: HelveticaNeue;
   line-height: 14px;
+`;
+
+function SmallAva(props) {
+  return (
+    <div>
+      <a>
+        <AvatarSmall src={props.src} alt={props.alt} />
+      </a>
+    </div>
+  );
+}
+
+const Button = styled.button`
+  background: #1da1f2;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 100px;
+  line-spacing: 0.01px;
+  line-height: 18px;
+`;
+
+const ProfileHeaderName = styled.h1`
+  color: #14171a;
+  font-size: 22px;
+  line-spacing: 0.02px;
+  font-weight: bold;
+  line-height: 1.5;
+  vertical-align: middle;
+`;
+
+const Tick = styled.img`
+  max-height: 18px;
+  max-width: 18px;
+  vertical-align: middle;
 `;
 
 class App extends Component {
@@ -106,7 +135,14 @@ class App extends Component {
               </div>
 
               <div className="row">
-                <SearchInput placeholder="Search Twitter" />
+                <SearchInput placeholder="Search Twitter" type="text" />
+
+                <SmallAva
+                  src={process.env.PUBLIC_URL + "pics/small_ava.jpg"}
+                  alt="small-ava"
+                />
+
+                <Button>Tweet</Button>
               </div>
             </div>
           </div>
@@ -117,12 +153,19 @@ class App extends Component {
           alt="cover-everyinteract"
         />
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Wrapper>
-          <Title>Hello World, this is my first styled component!</Title>
-        </Wrapper>
+        <div className="container">
+          <div className="row">
+            <div className="cox-lg-3" />
+            <ProfileHeaderName>Every Interact </ProfileHeaderName>
+            <span>
+              <Tick
+                src={process.env.PUBLIC_URL + "pics/Tick.jpg"}
+                alt="pics/Tick.jpg"
+              />
+            </span>
+          </div>
+          <div className="col-lg-6" />
+        </div>
       </div>
     );
   }

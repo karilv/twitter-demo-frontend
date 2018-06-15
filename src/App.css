@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Helvetica Neue", "Helvetica";
 }
 
 .App-logo {
@@ -7,22 +8,14 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.container {
 }
 
-.App-title {
-  font-size: 1.5em;
+.row {
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Header-bar {
+  background-color: #ffffff;
+  height: 45px;
+  padding-top: 10px;
 }

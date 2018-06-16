@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "normalize.css";
 import styled from "styled-components";
 import "flexboxgrid2";
-import locationicon from "./icons/Icon_ Location.svg";
-import linkicon from "./icons/Icon_ Link.svg";
-import joinedicon from "./icons/icon_ joined.svg";
+import locationicon from "./icons/Icon_Location.svg";
+import linkicon from "./icons/Icon_Link.svg";
+import joinedicon from "./icons/icon_joined.svg";
+import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 
 const ProfileInfoCard = styled.div`
   margin-top: 40px;
@@ -45,7 +46,9 @@ const Tick = styled.img`
   max-width: 18px;
   vertical-align: middle;
   display: inline;
+  margin-left: 5px;
 `;
+
 const UserNameBio = styled.p`
   font-family: HelveticaNeue;
   line-height: 21px;
@@ -104,12 +107,14 @@ function ProfileInfoCardleft(props) {
         <ProfileName>Every Interact</ProfileName>
         <span>
           <Tick
-            src={process.env.PUBLIC_URL + "pics/Tick.jpg"}
+            src={process.env.PUBLIC_URL + "/pics/Tick.jpg"}
             alt="pics/Tick.jpg"
           />
         </span>
         <br />
-        <UserName>@Every Interact</UserName>
+        <Link to="/">
+          <UserName>@Every Interact</UserName>
+        </Link>
         <FollowsYou>Follows You </FollowsYou>
         <UserNameBio>
           UX Design studio focussed problem solving creativity. Design to us is

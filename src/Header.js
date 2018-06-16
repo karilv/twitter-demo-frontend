@@ -9,7 +9,7 @@ import notifyicon from "./icons/Icon_Notifications.svg";
 import msgicon from "./icons/Icon_Messages.svg";
 import searchicon from "./icons/icon_magnifier.svg";
 import "flexboxgrid2";
-import { Button } from "./App";
+import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 
 const NavIcon = styled.img`
   color: #667580;
@@ -19,7 +19,7 @@ const NavIcon = styled.img`
   margin-right: 6px;
 `;
 
-const NavLink = styled.span`
+const NavTitle = styled.span`
   font-size: 13px;
   text-align: center;
   font-weight: bold;
@@ -29,13 +29,14 @@ const NavLink = styled.span`
   display: inline;
 `;
 
-const NavBtn = styled.div`
+const NavBtn = styled(NavLink)`
   display: flex;
   align-content: align-center;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 6px;
   margin-bottom: 7px;
+  text-decoration: none;
 `;
 
 const NavMenuItem = styled.div`
@@ -100,38 +101,41 @@ function Header(props) {
         <div className="container">
           <div className="row between-lg">
             <NavMenuItem>
-              <NavBtn>
+              <NavBtn to="/home">
                 <NavIcon src={homeicon} alt="homeicon" />
-                <NavLink>Home</NavLink>
+                <NavTitle>Home</NavTitle>
               </NavBtn>
 
-              <NavBtn>
+              <NavBtn to="/moments">
                 <NavIcon src={momentsicon} alt="momentsicon" />
-                <NavLink>Moments</NavLink>
+                <NavTitle>Moments</NavTitle>
               </NavBtn>
 
-              <NavBtn>
+              <NavBtn to="/notifications">
                 <NavIcon src={notifyicon} alt="notifyicon" />
-                <NavLink>Notifications</NavLink>
+                <NavTitle>Notifications</NavTitle>
               </NavBtn>
 
-              <NavBtn>
+              <NavBtn to="/messages">
                 <NavIcon src={msgicon} alt="msgicon" />
-                <NavLink>Messages</NavLink>
+                <NavTitle>Messages</NavTitle>
               </NavBtn>
             </NavMenuItem>
 
             <NavMenuItem>
-              <TwitterLogo src={logo} alt="logo" />
+              <Link to="/homepage">
+                <TwitterLogo src={logo} alt="logo" />
+              </Link>
             </NavMenuItem>
 
             <NavMenuItem>
               <SearchInput placeholder="Search Twitter" type="text" />
-
-              <SmallAva
-                src={process.env.PUBLIC_URL + "pics/small_ava.jpg"}
-                alt="small-ava"
-              />
+              <Link to="/">
+                <SmallAva
+                  src={process.env.PUBLIC_URL + "/pics/small_ava.jpg"}
+                  alt="small-ava"
+                />
+              </Link>
 
               <HeaderButton>Tweet</HeaderButton>
             </NavMenuItem>
@@ -140,7 +144,7 @@ function Header(props) {
       </HeaderBar>
 
       <CoverImg
-        src={process.env.PUBLIC_URL + "pics/everyinteract_cover.jpg"}
+        src={process.env.PUBLIC_URL + "/pics/everyinteract_cover.jpg"}
         alt="cover-everyinteract"
       />
     </div>

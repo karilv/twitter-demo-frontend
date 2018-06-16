@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { Component } from "react";
 import logo from "./icons/twitterlogo.svg";
 import "normalize.css";
@@ -8,6 +9,7 @@ import notifyicon from "./icons/Icon_Notifications.svg";
 import msgicon from "./icons/Icon_Messages.svg";
 import searchicon from "./icons/icon_magnifier.svg";
 import "flexboxgrid2";
+import { Button } from "./App";
 
 const NavIcon = styled.img`
   color: #667580;
@@ -67,13 +69,14 @@ const SearchInput = styled.input`
 const SmallAva = styled.img`
   max-height: 32px;
   max-width: 32px;
+  margin-left: 16px;
 `;
 
 const CoverImg = styled.img`
   width: 100%;
 `;
 
-const Button = styled.button`
+const HeaderButton = styled.button`
   background: #1da1f2;
   color: #ffffff;
   font-size: 14px;
@@ -130,7 +133,7 @@ function Header(props) {
                 alt="small-ava"
               />
 
-              <Button>Tweet</Button>
+              <HeaderButton>Tweet</HeaderButton>
             </NavMenuItem>
           </div>
         </div>

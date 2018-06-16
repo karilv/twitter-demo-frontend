@@ -123,7 +123,7 @@ function Header(props) {
             </NavMenuItem>
 
             <NavMenuItem>
-              <Link to="/homepage">
+              <Link to="/">
                 <TwitterLogo src={logo} alt="logo" />
               </Link>
             </NavMenuItem>

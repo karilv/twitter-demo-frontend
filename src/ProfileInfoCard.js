@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { Component } from "react";
 import "normalize.css";
 import styled from "styled-components";
@@ -5,7 +6,7 @@ import "flexboxgrid2";
 import locationicon from "./icons/Icon_Location.svg";
 import linkicon from "./icons/Icon_Link.svg";
 import joinedicon from "./icons/icon_joined.svg";
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ProfileInfoCard = styled.div`
   margin-top: 40px;

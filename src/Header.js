@@ -9,7 +9,7 @@ import notifyicon from "./icons/Icon_Notifications.svg";
 import msgicon from "./icons/Icon_Messages.svg";
 import searchicon from "./icons/icon_magnifier.svg";
 import "flexboxgrid2";
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavIcon = styled.img`
   color: #667580;

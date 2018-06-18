@@ -1,14 +1,11 @@
-// eslint-disable-next-line
 import React, { Component } from "react";
 import logo from "./icons/twitterlogo.svg";
-import "normalize.css";
 import styled from "styled-components";
 import homeicon from "./icons/Icon_Home.svg";
 import momentsicon from "./icons/Icon_Moments.svg";
 import notifyicon from "./icons/Icon_Notifications.svg";
 import msgicon from "./icons/Icon_Messages.svg";
 import searchicon from "./icons/icon_magnifier.svg";
-import "flexboxgrid2";
 import { Link, NavLink } from "react-router-dom";
 
 const NavIcon = styled.img`

@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { Component } from "react";
 import "normalize.css";
 import styled from "styled-components";

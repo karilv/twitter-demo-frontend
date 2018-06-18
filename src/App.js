@@ -20,7 +20,7 @@ class App extends Component {
             <Redirect exact from="/" to="/EveryInteract" />
           </Switch>
           <header>
-            <Route path="/" component={Header} />
+            <Header />
           </header>
           <main>
             <Route path="/EveryInteract" component={TweetFeed} />

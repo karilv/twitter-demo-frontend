@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { Component } from "react";
 import "normalize.css";
 import "./App.css";
@@ -14,9 +13,9 @@ import {
   Redirect
 } from "react-router-dom";
 import pinicon from "./icons/Icon_Pinned.svg";
-import retweeticon from "./icons/Icon_Retweet.svg";
-import loveicon from "./icons/Icon_Loves.svg";
-import commenticon from "./icons/./Icon_Comments.svg";
+// import retweeticon from "./icons/Icon_Retweet.svg";
+// import loveicon from "./icons/Icon_Loves.svg";
+// import commenticon from "./icons/Icon_Comments.svg";
 
 const StatsBar = styled.div`
   background-color: #ffffff;
